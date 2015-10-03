@@ -398,6 +398,7 @@ setup_tty(int fd)
 			perror("Could not activate VT");
 			goto error2;
 		}
+		sleep(1);
 
 		if (ioctl(fd, VT_WAITACTIVE, vt) == -1) {
 			perror("Could not wait for VT to become active");
